@@ -1,0 +1,1 @@
+yandex_token = 'AQAAAAAbYYa4AADLW8zauu_Z0kzFgKMT2U2wNWk'
