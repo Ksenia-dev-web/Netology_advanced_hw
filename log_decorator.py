@@ -11,11 +11,12 @@ def logger_decor(path):
             answer = function(*args, **kwargs)
             with open(path, 'w', encoding='UTF-8') as f:
                 f.write(f'{function.__name__}, {datetime.datetime.now()}, {args}, {kwargs}, {answer}, {path} \n')
+            return answer
         return new_function
     return decorator
 
 
-@logger_decor('log_info.txt')
+@logger_decor('log_info_blah.txt')
 def blah_blah(x, y):
     answer = x + y
     return answer
@@ -53,9 +54,46 @@ def habrScrap():
 
 
 def main():
-    blah_blah(5, 6)
+    blah_blah(8, 6)
+    blah_blah(10, 8)
     habrScrap()
 
 
 if __name__ == '__main__':
     main()
+
+
+# Оксана, здравствуйте!
+# Спасибо за выполненную работу!
+#
+# Можно использовать как абсолютный так и относительный путь.
+#
+# У Вас отлично получилось: создать декоратор и применить его.
+# Обратите внимание, что в new_function не определен return из-за чего теряется результат работы декорируемой функции.
+#
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+# 10
+# 11
+# @logger_decor('log_info.txt')
+# def summator(x, y):
+#    return x + y
+#
+# three = summator(1, 2)
+# five = summator(2, 3)
+#
+# result = summator(three, five)
+#
+# print('result: ', result)
+# print('result type: ', type(result))
+# В result должно записаться 8 типа int
+#
+# Вы молодец, но работа требует доработки.
+# Давайте внесем правки!
